@@ -1,0 +1,57 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductController2;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoriesController;
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+
+Route::get('list', [ProductController::class, 'index']);
+Route::get('list2', [ProductController::class, 'index2']);
+Route::get('list3', [CategoriesController::class, 'index3']);
+Route::get('add', [ProductController::class, 'add']);
+Route::post('save', [ProductController::class, 'save']);
+Route::get('edit/{id}', [ProductController::class, 'edit']);
+Route::post('update', [ProductController::class, 'update']);
+Route::get('delete/{id}', [ProductController::class, 'delete']);
+
+Route::get('/', [ProductController2::class, 'index']);
+Route::get('products', [ProductController2::class, 'getProducts']);
+Route::get('/details{id}', [ProductController2::class, 'details']);
+
+Route::get('register', [CustomerController::class, 'register']);
+Route::post('register-process', [CustomerController::class, 'registerProcess'])->name('register-process');
+Route::get('login', [CustomerController::class, 'login']);
+Route::post('login-process', [CustomerController::class, 'loginProcess'])->name('login-process');
+Route::get('logout', [CustomerController::class, 'logout']);
+Route::get('information/{id}', [CustomerController::class, 'information']);
+Route::post('saveinformation', [CustomerController::class, 'saveinformation'])->name('save-information');
+Route::get('admin/dashboard', [AdminController::class, 'dashboard']);
+Route::get('admin/customers', [AdminController::class, 'customers']);
+Route::get('admin/producers', [AdminController::class, 'producers']);
+Route::get('admin/products', [AdminController::class, 'products']);
+Route::get('admin/categories', [AdminController::class, 'categories']);
+Route::get('admin/deletecustomer', [AdminController::class, 'deletecustomer']);
+
+Route::get('home', function (){
+    return view('0905b.home');
+});
+
+
+Route::get('add', [CategoriesController::class, 'add']);
+Route::post('save', [CategoriesController::class, 'save']);
+Route::get('edit/{id}', [CategoriesController::class, 'edit']);
+Route::post('update', [CategoriesController::class, 'update']);
+Route::get('delete/{id}', [CategoriesController::class, 'delete']);
