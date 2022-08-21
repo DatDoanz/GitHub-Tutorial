@@ -116,7 +116,6 @@ https://templatemo.com/tm-546-sixteen-clothing
           <div class="col-md-12">
             <div class="filters-content">
                 <div class="row grid">
-                  @foreach ($data as $row)
                   <div class="col-lg-4 col-md-4 all des">
                     <div class="product-item">
                       <a href="{{url('details')}}" title="{{$data->productDetails}}">
@@ -125,16 +124,15 @@ https://templatemo.com/tm-546-sixteen-clothing
                       </figure>
                       </a>  
                       <div class="down-content">
-                        <h4>Price: {{$data->productPrice}}</h4>
                         <h4>{{$data->productName}}</h4>
-                        <h4>Producer: {{$data->producer}}</h4>
+                        <h4>Price: {{$data->productPrice}}</h4>
+                        <h4>Producer: {{$data->producerID}}</h4>
+                        <h4>Details: {{$data->productDetails}}</h4>
                         <h4><a href="{{url('products')}}">Back</a></h4>
                         <h4><a href="#"> Add to cart</a></h4>
                       </div>
                       </div>
-                    </div>
-                        @endforeach
-                    
+                    </div> 
                     </div>
                 </div>
             </div>

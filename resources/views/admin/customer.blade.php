@@ -38,10 +38,9 @@
           <span></span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+          <a class="nav-link" data-toggle="collapse" href="{{url('admin/Products')}}" >
             <i class="mdi mdi-palette menu-icon"></i>
             <span class="menu-title">Products</span>
-            <i class="menu-arrow"></i>
           </a>
         </li>
         <li class="nav-item">
@@ -51,13 +50,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/charts/chartjs.html">
+          <a class="nav-link" href="{{url('admin/producers')}}">
             <i class="mdi mdi-chart-pie menu-icon"></i>
             <span class="menu-title">Producer</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/tables/basic-table.html">
+          <a class="nav-link" href="{{url('admin/categories')}}">
             <i class="mdi mdi-grid-large menu-icon"></i>
             <span class="menu-title">Categories</span>
           </a>

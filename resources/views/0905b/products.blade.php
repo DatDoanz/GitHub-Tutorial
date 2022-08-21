@@ -148,6 +148,9 @@ https://templatemo.com/tm-546-sixteen-clothing
       </div>
       <div class ="col-xl-3 col-lg-3 col-md-6 col-sm-6">
       <a href="{{url('admin/dashboard')}}" class="btn btn-primary">Admin Dashboard</a>
+      <a class="nav-link" href="{{url('login1')}}">Login</a>
+      <a class="nav-link" href="{{url('register1')}}">Register</a>
+
     </div>
     </div>
      

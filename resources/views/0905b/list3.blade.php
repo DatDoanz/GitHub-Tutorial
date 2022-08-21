@@ -19,7 +19,7 @@
                     </div>
                 @endif
                 <div style="margin-right: 10%; float: right;">
-                    <a href="{{url('add')}}" class="btn btn-outline-success">Add New</a>
+                    <a href="{{url('add2')}}" class="btn btn-outline-success">Add New</a>
                 </div>
                 <table class="table table-hover">
                     <thead>
@@ -34,7 +34,7 @@
                                 <td>{{$row->cate_id}}</td>
                                 <td>{{$row->cate_name}}</td>
                                 <td>
-                                    <a href="{{url('edit/'. $row->cate_id)}}" class="btn btn-primary">Edit</a>
+                                    <a href="{{url('edit2/'. $row->cate_id)}}" class="btn btn-primary">Edit</a>
                                     <a href="{{url('delete/'. $row->cate_id)}}" class="btn btn-danger"
                                         onclick="return confirm('Are you sure?');">Delete</a>
                                 </td>

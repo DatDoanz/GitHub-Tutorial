@@ -29,7 +29,7 @@ Route::get('delete/{id}', [ProductController::class, 'delete']);
 
 Route::get('/', [ProductController2::class, 'index']);
 Route::get('products', [ProductController2::class, 'getProducts']);
-Route::get('/details{id}', [ProductController2::class, 'details']);
+Route::get('/details/{id}', [ProductController2::class, 'details']);
 
 Route::get('register', [CustomerController::class, 'register']);
 Route::post('register-process', [CustomerController::class, 'registerProcess'])->name('register-process');
@@ -50,8 +50,14 @@ Route::get('home', function (){
 });
 
 
-Route::get('add', [CategoriesController::class, 'add']);
+Route::get('add2', [CategoriesController::class, 'add2']);
 Route::post('save', [CategoriesController::class, 'save']);
-Route::get('edit/{id}', [CategoriesController::class, 'edit']);
+Route::get('edit2/{id}', [CategoriesController::class, 'edit2']);
 Route::post('update', [CategoriesController::class, 'update']);
 Route::get('delete/{id}', [CategoriesController::class, 'delete']);
+
+
+Route::get('register1', [AdminController::class, 'register1']);
+Route::post('registerAdmin-process', [AdminController::class, 'registerAdminProcess'])->name('registerAdmin-process');
+Route::get('login1', [AdminController::class, 'login1']);
+Route::post('loginAdmin-process', [AdminController::class, 'loginAdminProcess'])->name('loginAdmin-process');
