@@ -38,8 +38,8 @@
           <span></span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="{{url('admin/products')}}">
-            <i class="mdi mdi-clipboard-text"></i> &emsp;
+          <a class="nav-link" href="{{url('admin/products')}}">
+            <i class="mdi mdi-account"></i> &emsp;
             <span class="menu-title">Products</span>
           </a>
         </li>
@@ -50,7 +50,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('admin/Producer')}}">
+          <a class="nav-link" href="{{url('admin/Producers')}}">
             <i class="mdi mdi-chart-pie menu-icon"></i>
             <span class="menu-title">Producer</span>
           </a>
@@ -445,7 +445,7 @@
                                       
 
 
-                                      <td><a class="btn btn-sm btn-danger" href="{{url('admin/deleteproducts')}}">Delete</a></td>
+                                      <td><a class="btn btn-sm btn-danger" href="{{url('delete/product/' . $row->productID)}}">Delete</a></td>
                              </tr>
                              @endforeach
                       </tbody>

@@ -38,10 +38,9 @@
           <span></span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="#ui-basic" >
-            <i class="mdi mdi-palette menu-icon"></i>
+          <a class="nav-link" href="{{url('admin/products')}}">
+            <i class="mdi mdi-account"></i> &emsp;
             <span class="menu-title">Products</span>
-            <i class="menu-arrow"></i>
           </a>
         </li>
         <li class="nav-item">
@@ -437,7 +436,7 @@
                                   <td><input class="form-check-input" type="checkbox"></td>
                                       <td>{{$row->cate_id}}</td>
                                       <td>{{$row->cate_name}}</td>
-                                      <td><a class="btn btn-sm btn-danger" href="{{url('admin/deletecategories')}}">Delete</a></td>
+                                      <td><a class="btn btn-sm btn-danger" href="{{url('delete/{id}' . $row->cate_id)}}">Delete</a></td>
                              </tr>
                              @endforeach
                       </tbody>

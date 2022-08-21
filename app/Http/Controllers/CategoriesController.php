@@ -35,7 +35,7 @@ class CategoriesController extends Controller
     public function update2(Request $request)
     {
         $id = $request->id;
-        Categories::where('cate_id', '=', $id)->update2([
+        Categories::where('cate_id', '=', $id)->update([
             'cate_name'=>$request->name,
         ]);
         return redirect()->back()->with('success', 'Categories Updated Successfully');
@@ -47,10 +47,10 @@ class CategoriesController extends Controller
         return redirect()->back()->with('success', 'Categories Deleted Successfully');
     }
 
-    public function edit($id)
+    public function edit2($id)
     {
         $data = Categories::where('cate_id', '=', $id)->first();
         $categories = Categories::get();
-        return view('edit2', compact('data', 'categories'));
+        return view('0905b.edit2', compact('data', 'categories'));
     }
 }

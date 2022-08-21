@@ -38,7 +38,7 @@ class AdminController extends Controller
 
     public function products()
     {
-        $data = product::get();
+        $data = Product::get();
         return view('admin.product', compact('data'));
     }
 

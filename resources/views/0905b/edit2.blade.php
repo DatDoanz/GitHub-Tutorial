@@ -18,7 +18,7 @@
                         {{Session::get('success')}}
                     </div>
                 @endif
-                <form action="{{url('update')}}" method="POST">
+                <form action="{{url('update2')}}" method="POST">
                     @csrf
                     <div class="md-3">
                         <label for="id" class="form-label">ID</label>

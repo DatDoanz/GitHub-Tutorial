@@ -38,8 +38,8 @@
           <span></span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="{{url('admin/Products')}}" >
-            <i class="mdi mdi-clipboard-text"></i>
+          <a class="nav-link" href="{{url('admin/products')}}">
+            <i class="mdi mdi-account"></i> &emsp;
             <span class="menu-title">Products</span>
           </a>
         </li>
