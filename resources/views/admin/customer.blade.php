@@ -444,7 +444,7 @@
                                       <td>{{$row->customersAddress}}</td>
                                       <td>{{$row->customersEmail}}</td>
                                       <td>{{$row->customersPhone}}</td>
-                                      <td><a class="btn btn-sm btn-danger" href="{{url('admin/deletecustomer')}}">Delete</a></td>
+                                      <td><a class="btn btn-sm btn-danger" href="{{url('admin/deletecustomer/'. $row->customersID)}}">Delete</a></td>
                              </tr>
                              @endforeach
                       </tbody>

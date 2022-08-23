@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\CategoriesController;
-
+use DB;
 use App\Models\Categories;
 
 
@@ -22,14 +22,14 @@ class CategoriesController extends Controller
         return view('0905b.add2', compact('categories'));
     }
 
-    public function save(Request $request)
+    public function save2(Request $request)
     {
         $categories = new Categories();
         $categories->cate_id = $request->id;
         $categories->cate_name = $request->name;
-        $categories->save();
+        $categories->save2();
 
-        return redirect()->back()->with('success', 'Categories Added Successfully');
+        return redirect('0905b.list3')->back()->with('success', 'Categories Added Successfully');
     }
 
     public function update2(Request $request)

@@ -25,6 +25,7 @@
     <label for="password">Password</label> <br />
     <input type="password" name="password" id="pass"> <br />
     <button type="submit" value="Login"></button>
+    <a class="btn btn-primary" href="{{url('/')}}">Back</a>
   </div>
   <div class="right">
     <div class="connect">Connect with</div>

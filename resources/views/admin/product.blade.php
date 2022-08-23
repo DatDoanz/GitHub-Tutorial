@@ -422,6 +422,7 @@
                   <h4 class="card-title">Product-list</h4>
                   <div class="table-responsive">
                     <table class="table table-striped">
+                      <a class="btn btn-primary" href="{{url('list')}}">Add</a>
                       <thead>
                             <tr>
                                 <th scope="col"><input class="form-check-input" type="checkbox"></th>

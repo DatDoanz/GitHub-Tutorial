@@ -12,41 +12,35 @@
     <div class="container" style="margin-top: 50px">
         <div class="row">
             <div class="col-md-12">
-                <h2>Product List</h2>
+                <h2>Categories List</h2>
                 @if (Session::has('success'))
                     <div class="alert alert-success" role="alert">
                         {{Session::get('success')}}
                     </div>
                 @endif
                 <div style="margin-right: 10%; float: right;">
-                    <a href="{{url('add')}}" class="btn btn-outline-success">Add New</a>
+                    <a href="{{url('add3')}}" class="btn btn-outline-success">Add New</a>
                 </div>
                 <table class="table table-hover">
-                    <a class="btn btn-primary" href="{{url('admin/products')}}">Back</a>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Product Name</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Actions</th>
+                            <th>Producer Name</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($data as $row)
                             <tr>
-                                <td>{{$row->productID}}</td>
-                                <td>{{$row->productName}}</td>
-                                <td>{{$row->productPrice}}</td>
-                                <td><img src="assets/images/products/{{$row->productImage1}}" 
-                                         alt="" height="90px" width="90px"></td>
+                                <td>{{$row->producerID}}</td>
+                                <td>{{$row->producerName}}</td>
                                 <td>
-                                    <a href="{{url('edit/'. $row->productID)}}" class="btn btn-primary">Edit</a>
-                                    <a href="{{url('delete/product/'. $row->productID)}}" class="btn btn-danger"
+                                    <a href="{{url('edit3/'. $row->producerID)}}" class="btn btn-primary">Edit</a>
+                                    <a href="{{url('delete/'. $row->producerID)}}" class="btn btn-danger"
                                         onclick="return confirm('Are you sure?');">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
+                        <a class="btn btn-primary" href="{{url('admin/producers')}}">Back</a>
                     </tbody>
                 </table>
             </div>

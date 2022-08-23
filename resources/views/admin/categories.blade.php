@@ -421,6 +421,7 @@
                   <h4 class="card-title">Categories</h4>
                   <div class="table-responsive">
                     <table class="table table-striped">
+                      <a class="btn btn-primary" href="{{url('list3')}}">Add</a>
                       <thead>
                             <tr>
                                 <th scope="col"><input class="form-check-input" type="checkbox"></th>

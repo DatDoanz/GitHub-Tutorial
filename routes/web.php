@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController2;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\ProducerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,7 +44,7 @@ Route::get('admin/customers', [AdminController::class, 'customers']);
 Route::get('admin/producers', [AdminController::class, 'producers']);
 Route::get('admin/products', [AdminController::class, 'products']);
 Route::get('admin/categories', [AdminController::class, 'categories']);
-Route::get('admin/deletecustomer', [AdminController::class, 'deletecustomer']);
+Route::get('admin/deletecustomer/{id}', [AdminController::class, 'deletecustomer']);
 
 Route::get('home', function (){
     return view('0905b.home');
@@ -51,10 +52,15 @@ Route::get('home', function (){
 
 
 Route::get('add2', [CategoriesController::class, 'add2']);
-Route::post('save', [CategoriesController::class, 'save']);
+Route::post('add2', [CategoriesController::class, 'add2']);
+Route::get('save2', [CategoriesController::class, 'save2']);
+Route::post('save2', [CategoriesController::class, 'save2']);
 Route::get('edit2/{id}', [CategoriesController::class, 'edit2']);
+Route::post('edit2/{id}', [CategoriesController::class, 'edit2']);
+Route::get('update2', [CategoriesController::class, 'update2']);
 Route::post('update2', [CategoriesController::class, 'update2']);
 Route::get('/delete/{id}', [CategoriesController::class, 'delete']);
+Route::post('/delete/{id}', [CategoriesController::class, 'delete']);
 
 
 Route::get('register1', [AdminController::class, 'register1']);
@@ -65,3 +71,12 @@ Route::post('loginAdmin-process', [AdminController::class, 'loginAdminProcess'])
 Route::get('index', function(){
     return view('admin.index');
 });
+
+
+
+Route::get('add3', [ProducerController::class, 'add3']);
+Route::post('save3', [ProducerController::class, 'save3']);
+Route::get('edit3/{id}', [ProducerController::class, 'edit3']);
+Route::post('update3', [ProducerController::class, 'update3']);
+Route::get('/delete/{id}', [ProducerController::class, 'delete']);
+Route::get('list4', [ProducerController::class, 'index4']);

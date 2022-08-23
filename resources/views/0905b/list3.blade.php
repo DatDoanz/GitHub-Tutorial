@@ -40,6 +40,7 @@
                                 </td>
                             </tr>
                         @endforeach
+                        <a class="btn btn-primary" href="{{url('admin/categories')}}">Back</a>
                     </tbody>
                 </table>
             </div>
