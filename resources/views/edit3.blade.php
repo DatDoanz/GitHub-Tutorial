@@ -12,7 +12,7 @@
     <div class="container" style="margin-top: 50px">
         <div class="row">
             <div class="col-md-12">
-                <h2>Edit Categories</h2>
+                <h2>Edit Producer</h2>
                 @if (Session::has('success'))
                     <div class="alert alert-success" role="alert">
                         {{Session::get('success')}}

@@ -59,8 +59,8 @@ Route::get('edit2/{id}', [CategoriesController::class, 'edit2']);
 Route::post('edit2/{id}', [CategoriesController::class, 'edit2']);
 Route::get('update2', [CategoriesController::class, 'update2']);
 Route::post('update2', [CategoriesController::class, 'update2']);
-Route::get('/delete/{id}', [CategoriesController::class, 'delete']);
-Route::post('/delete/{id}', [CategoriesController::class, 'delete']);
+Route::get('/delete2/{id}', [CategoriesController::class, 'delete2']);
+// Route::post('/delete/{id}', [CategoriesController::class, 'delete']);
 
 
 Route::get('register1', [AdminController::class, 'register1']);

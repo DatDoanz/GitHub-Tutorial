@@ -50,7 +50,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('admin/Producers')}}">
+          <a class="nav-link" href="{{url('admin/producers')}}">
             <i class="mdi mdi-chart-pie menu-icon"></i>
             <span class="menu-title">Producer</span>
           </a>

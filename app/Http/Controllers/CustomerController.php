@@ -73,7 +73,7 @@ class CustomerController extends Controller
             'customersEmail'=>$request->email,
             'customersPhone'=>$request->phone
         ]);
-        return redirect()->back()->with('success', 'Infromation Updated Successfully');
+        return redirect()->back()->with('success', 'Information Updated Successfully');
     }
 
 }

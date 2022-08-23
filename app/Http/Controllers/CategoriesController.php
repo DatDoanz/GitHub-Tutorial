@@ -27,9 +27,9 @@ class CategoriesController extends Controller
         $categories = new Categories();
         $categories->cate_id = $request->id;
         $categories->cate_name = $request->name;
-        $categories->save2();
+        $categories->save();
 
-        return redirect('0905b.list3')->back()->with('success', 'Categories Added Successfully');
+        return redirect()->back()->with('success', 'Categories Added Successfully');
     }
 
     public function update2(Request $request)
@@ -41,7 +41,7 @@ class CategoriesController extends Controller
         return redirect()->back()->with('success', 'Categories Updated Successfully');
     }
 
-    public function delete($id)
+    public function delete2($id)
     {
         Categories::where('cate_id', '=', $id)->delete();
         return redirect()->back()->with('success', 'Categories Deleted Successfully');

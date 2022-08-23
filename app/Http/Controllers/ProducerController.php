@@ -33,7 +33,7 @@ class ProducerController extends Controller
     public function update3(Request $request)
     {
         $id = $request->id;
-        Producers::where('producerID', '=', $id)->update3([
+        Producers::where('producerID', '=', $id)->update([
             'producerName'=>$request->name,
         ]);
         return redirect()->back()->with('success', 'Producer Updated Successfully');
